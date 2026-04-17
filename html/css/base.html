@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa da Cultura Local</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <nav class="topbar">
+        <div class="logo">
+            <strong> Mapa Cultural</strong>
+        </div>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn-outline">Iniciar sessão</a>
+            <a href="cadastro.html" class="btn-outline">Cadastre-se</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Descubra a Cultura Local</h1>
+            <p>Visitas guiadas, artesãos locais e projetos sociais na sua região.</p>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="O que você quer explorar? (Ex: Artesanato, Música)">
+                <button>Procurar</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="map-container">
+        <div id="map"></div>
+        
+        <div id="details" class="info-card">
+            <span class="category-badge" id="cat-text">Categoria</span>
+            <h2 id="title-text">Selecione um ponto</h2>
+            <p id="desc-text">Clique em um marcador no mapa para ver os detalhes.</p>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="base.js"></script>
+</body>
+</html>
