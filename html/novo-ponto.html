@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Ponto Cultural</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="novo-ponto.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <a href="base.html" class="close-btn">✕</a>
+        <h2>Anunciar Ponto Cultural</h2>
+        <p class="subtitle">Preencha os dados abaixo para que seu local apareça no mapa.</p>
+
+        <form action="#" id="form-ponto">
+            <div class="input-group">
+                <label>Nome do Local</label>
+                <input type="text" placeholder="Ex: Ateliê do Barro" required>
+            </div>
+
+            <div class="input-group">
+                <label>Descrição</label>
+                <textarea placeholder="Conte um pouco sobre a história e o que acontece por lá..." rows="4" required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label>Selecione a localização no mapa:</label>
+                <div id="map-selection"></div>
+                <input type="hidden" id="lat" name="lat">
+                <input type="hidden" id="lng" name="lng">
+                <small>Clique no mapa para marcar o ponto exato.</small>
+            </div>
+
+            <div class="input-group">
+                <label>Fotos do Local</label>
+                <input type="file" accept="image/*" multiple>
+            </div>
+
+            <button type="submit" class="btn-primary">Enviar para Aprovação</button>
+        </form>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map-selection').setView([-7.1195, -34.8450], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        let marker;
+        map.on('click', function(e) {
+            const { lat, lng } = e.latlng;
+            
+            if (marker) map.removeLayer(marker);
+            marker = L.marker([lat, lng]).addTo(map);
+            
+            document.getElementById('lat').value = lat;
+            document.getElementById('lng').value = lng;
+        });
+    </script>
+</body>
+</html>
