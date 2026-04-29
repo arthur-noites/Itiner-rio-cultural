@@ -28,6 +28,6 @@ document.getElementById("formCadastro").addEventListener("submit", async functio
 
     } catch (error) {
         console.error(error);
-        alert("Erro ao cadastrar");
+        alert("Erro ao cadastrar!");
     }
 });

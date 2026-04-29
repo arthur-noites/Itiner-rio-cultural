@@ -6,7 +6,6 @@
 }
 
 body { 
-    /* Fundo escurecido */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1920&auto=format&fit=crop') center/cover;
     height: 100vh;
     display: flex;
@@ -24,7 +23,6 @@ body {
     position: relative;
 }
 
-/* Botão de fechar (Volta para a tela inicial) */
 .close-btn {
     position: absolute;
     top: 20px;
@@ -88,7 +86,6 @@ h2 {
     background-color: #e91e63; 
 }
 
-/* --- O divisor "Ou inicie sessão com" --- */
 .divider {
     display: flex;
     align-items: center;
@@ -130,7 +127,6 @@ h2 {
     background: #f4f4f4; 
 }
 
-/* --- Link do rodapé --- */
 .footer-link {
     text-align: center;
     font-size: 14px;

@@ -10,7 +10,7 @@ const pontosCulturais = [
         nome: "Artesanato da Dona Maria",
         categoria: "Artesanato",
         coords: [-7.1150, -34.8320],
-        desc: "Produção de rendas tradicionais e oficinas para jovens."
+        desc: "Produção de rendas tradicionais e oficinas para jovens"
     },
     {
         id: 2,
