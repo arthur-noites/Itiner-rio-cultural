@@ -3,7 +3,7 @@ document.getElementById("formLogin").addEventListener("submit", async function(e
 
     const form = e.target;
 
-    const dados = {
+    const dados = { 
         email: form.email.value,
         senha: form.senha.value
     };
